@@ -39,8 +39,7 @@ console.log(arr) // prints full array
 var x = 34; // operand: 34 and 56, operator is +, etc
 var y = 56;
 console.log(x == y);
-
-
-
-
-        
+// console.log(x >= y);
+// console.log(x <= y);
+// console.log(x > y);
+// console.log(x < y);      
