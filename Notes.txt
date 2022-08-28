@@ -1,0 +1,15 @@
+HTML:
+
+HyperTextMarkUp Language
+Standard markup language for givinga skeleton to web pages
+
+CSS:
+
+Cascading Style Sheets, is a language used to handle the presentation of the webpage
+containing HTML
+
+JS:
+
+Allows clientside scripting to create dynamic web apps,
+Designed to make pages alive. Scripts can be executed in the browser itself.
+
