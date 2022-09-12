@@ -23,6 +23,7 @@ var number1 = 34;
 var number2 = 56;
 console.log(number1 + number2);
 
+
 // 4. Data types in JavaScript
 // Numbers
 var num1 = 455;
@@ -42,6 +43,8 @@ var marks = {
 }
 console.log(marks);
 
+
+
 // Booleans
 var a = true;
 var b = false;
@@ -50,7 +53,7 @@ console.log(a, b);
 
 // var und = undefined;
 var und; // even if like this, then undefined printed, cause no value inside
-// console.log(und);
+console.log(und);
 
 var n = null; // null is printed, you are telling that there is nothing inside in variable
 // console.log(n);
@@ -64,7 +67,8 @@ At a very high level, there are two types of data types in JavaScript
 // var arr = [1, 2, 3, 4, 5]
 var arr = [1, 2, "bablu", 4, 5]
 console.log(arr) // prints full array
-// console.log(arr[0])
+console.log(arr[0])
+
 
 // Operators in JavaScript
 // Arithmetic Operators
@@ -96,15 +100,15 @@ console.log(x == y);
 
 // Logical and
 console.log(true && true) // true
-// console.log(true && false)
-// console.log(false && true)
-// console.log(false && false)
+console.log(true && false)
+console.log(false && true)
+console.log(false && false)
 
 // Logical or
 console.log(true || true) // true
-// console.log(true || false)
-// console.log(false || true)
-// console.log(false || false)
+console.log(true || false)
+console.log(false || true)
+console.log(false || false)
 
 // Logical not
 console.log(!false);
