@@ -97,66 +97,142 @@
 
 ///////////////////////////////////
 
-console.log("Chapter 2: Operators and expressions begins")
+// console.log("Chapter 2: Operators and expressions begins")
 
-// 77;
-// "Harry bhai"
-// false
-console.log("Operators in Js")
-// Arithmetic Operators 
-let a = 10;
-let b = 4;
-console.log("a + b = ", a + b)
-console.log("a - b = ", a - b)
-console.log("a / b = ", a / b)
-console.log("a ** b = ", a ** b)
-console.log("a % b = ", a % b)
-console.log("++a = ", ++a) // 10 first increment and print 11
-console.log("a++ = ", a++) // 11 first print and then increment and then value will be 12
-console.log("--a = ", --a) // From the value 12, decrement it and value prints 11
-console.log("a-- = ", a--) // From value 11 and decrement and value is 10 stored
-console.log("a = ", a) // stored value is 10
-console.log("a-- = ", a--)
+// // 77;
+// // "Harry bhai"
+// // false
+// console.log("Operators in Js")
+// // Arithmetic Operators 
+// let a = 10;
+// let b = 4;
+// console.log("a + b = ", a + b)
+// console.log("a - b = ", a - b)
+// console.log("a / b = ", a / b)
+// console.log("a ** b = ", a ** b)
+// console.log("a % b = ", a % b)
+// console.log("++a = ", ++a)
+// console.log("a++ = ", a++)
+// console.log("--a = ", --a)
+// console.log("a-- = ", a--)
+// console.log("a = ", a)
+// console.log("a-- = ", a--)
 
-// Assignment Operators 
-let assignment = 1;
-assignment += 5 // same as assignment = assignment + 5
-console.log("a is now = ", a)
-assignment -= 5 // same as assignment = assignment - 5
-console.log("a is now = ", a)
-assignment *= 5 // same as assignment = assignment * 5
-console.log("a is now = ", a)
-assignment /= 5 // same as assignment = assignment / 5
-console.log("a is now = ", a)
+// // Assignment Operators 
+// let assignment = 1;
+// assignment += 5 // same as assignment = assignment + 5
+// console.log("a is now = ", a)
+// assignment -= 5 // same as assignment = assignment - 5
+// console.log("a is now = ", a)
+// assignment *= 5 // same as assignment = assignment * 5
+// console.log("a is now = ", a)
+// assignment /= 5 // same as assignment = assignment / 5
+// console.log("a is now = ", a)
 
-// Comparison Operators 
-let comp1 = 6;
-let comp2 = "6";
-console.log("comp1 == comp2 is ", comp1 == comp2) // false
-console.log("comp1 != comp2 is ", comp1 != comp2) // true
-console.log("comp1 === comp2 is ", comp1 === comp2) // false
-console.log("comp1 !== comp2 is ", comp1 !== comp2) // true
-console.log("comp1 > comp2 is ", comp1 > comp2) // false
-//when comp1 is 6 and comp2 is "6", value looks same but type is int and string
-//that is the major diffrence b/w == and ===, == will give true, but === gives false
+// // Comparison Operators 
+// let comp1 = 6;
+// let comp2 = 7;
+// console.log("comp1 == comp2 is ", comp1 == comp2)
+// console.log("comp1 != comp2 is ", comp1 != comp2)
+// console.log("comp1 === comp2 is ", comp1 === comp2)
+// console.log("comp1 !== comp2 is ", comp1 !== comp2)
+// console.log("comp1 > comp2 is ", comp1 > comp2)
 
-// Logical Operators
-let x = 5;
-let y = 6;
-console.log(x<y && x==5)// And operator, here
-// true and true will true and rest all false
-console.log(x>y || x==5)// Or operator, here
-// true and true will give true and anyone of them true, then true
-// and in OR operator only false and false will give false.
-console.log(!false)
-console.log(!true)
+// // Logical Operators
+// let x = 5;
+// let y = 6;
+// console.log(x<y && x==5)
+// console.log(x>y || x==5)
+// console.log(!false)
+// console.log(!true)
 
-// Comments
-// This is a single line comment
-/* This is a sample multiline comment and a tutorial
-from 
-codewithharry */
+// // Comments
+// // This is a single line comment
+// /* This is a sample multiline comment and a tutorial
+// from 
+// codewithharry */
 
-console.log("Chapter 2: Operators and expressions ends")
+// console.log("Chapter 2: Operators and expressions ends")
 
 ////////////////////////////
+
+// console.log("Chapter 2: Conditional expressions begins")
+
+// let a = prompt("Hey whats you age?");
+// a = Number.parseInt(a); // Converting the string to a number
+// if(a<0){
+//   alert("This is an invalid age");
+// }
+// else if(a<9){
+//   alert("You are a kid and you cannot even think of driving");
+// }
+// else if(a<18 && a>=9){
+//   alert("You are a kid and you can think of driving after 18");
+// }
+// else{
+//   alert("You can now drive as you are above 18");
+// }
+// console.log("Done")
+// // HomeWork - Explore switch statement and write a basic program in the comments
+// console.log("You can", (a<18? "not drive" :"drive"))
+
+// console.log("Chapter 2: Conditional expressions ends")
+
+//////////////////////////////
+
+console.log("Chapter 2: Practice Sets begins")
+
+// Chapter 2PS
+// Problem No 1
+
+/*
+let age = prompt("What is your age?")
+age = Number.parseInt(age)
+if (age > 10 && age < 20) {
+  console.log("Your age lies between 10 and 20")
+}
+else {
+  console.log("Your age doesnt lies between 10 and 20")
+}
+*/
+
+// Problem No 2
+/*
+let age = prompt("What is your age?")
+switch (age) {
+  case '12':
+    console.log("Your age is 12")
+    break
+  case '13':
+    console.log("Your age is 13")
+    break
+  case '14':
+    console.log("Your age is 14")
+    break
+  case '15':
+    console.log("Your age is 15")
+    break
+  default:
+    console.log("Your age is not special")
+}
+*/
+// Problem No 3
+/*
+let num = prompt("What is your age?")
+num = Number.parseInt(num)
+if (num % 2 == 0 && num % 3 == 0) {
+  console.log("Your number is divisible by 2 and 3")
+}
+else {
+  console.log("Your number is not divisible by 2 and 3")
+}
+*/
+
+// Problem No 5
+let age = 19
+let a = age > 18 ? "You can drive" : "You cannot drive"
+console.log(a)
+
+console.log("Chapter 2: Practice Sets ends")
+
+//////////////////////////////////
