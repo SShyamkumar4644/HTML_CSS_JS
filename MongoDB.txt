@@ -1,0 +1,266 @@
+
+ db.comments.insert({
+    'name': 'Harry',
+    'lang': 'JS',
+    'member_since': 5,
+    'date': new Date()
+  })
+
+  Please enter a MongoDB connection string (Default: mongodb://localhost/):
+
+Current Mongosh Log ID: 6324186ba168be3932c58e9c
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.4
+Using MongoDB:          6.0.1
+Using Mongosh:          1.5.4
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-09-15T20:43:21.852+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+//VIEW ALL DATABASE
+test> show dbs
+CWHblog  48.00 KiB
+admin    40.00 KiB
+config   84.00 KiB
+local    72.00 KiB
+
+//CHECK IN WHICH DATABASE YOU ARE IN NOW
+test> db
+test
+
+//CREATE NEW DATABASE
+test> use comments
+switched to db comments
+
+//DISPLAY DATABASES
+comments> show dbs
+CWHBlog   40.00 KiB
+admin     40.00 KiB
+config   108.00 KiB
+local     72.00 KiB
+
+//CHECK IN WHICH DATABASE YOU ARE IN NOW
+comments> db
+comments
+
+//DROP DATABASE OF PRESENT ONE YOU ARE IN
+comments> db.dropDatabase()
+{ ok: 1, dropped: 'comments' }
+
+//COLLECTION RELATED COMMANDS
+// SHOW DATABASE, BUT YOU DELETED THE COMMENTS DATABASE
+comments> db
+comments
+
+//SHOW DATABASES, COMMENTS IS NOT THERE
+comments> show dbs
+CWHBlog   40.00 KiB
+admin     40.00 KiB
+config   108.00 KiB
+local     72.00 KiB
+
+//YOU HAVE CWHBlog, GET INSIDE BY THIS COMMAND
+comments> use CWHBlog
+switched to db CWHBlog
+
+//CHECK WHICH DATABASE YOU ARE IN NOW
+CWHBlog> db
+CWHBlog
+
+//SHOW COLLECTIONS OF THE DATABASE
+CWHBlog> show collections
+content
+
+// IF YOU WANT TO CREATE ANOTHER COLLECTION IN CWHBlog, USE THIS COMMAND
+CWHBlog> db.createCollection('comments')
+{ ok: 1 }
+
+//NOW CHECK COLLECTIONS YOU WILL HAVE COMMENTS
+CWHBlog> show collections
+comments
+content
+
+//DELETE THE COLLECTION, COMMAND FOR, db.nameofthecollection.drop()
+CWHBlog> db.content.drop()
+true
+
+//NOW CHECK THE COLLECTIONS
+CWHBlog> show collections
+comments
+
+//CREATE NEW COLLECTION OF MYCOMMENTS
+CWHBlog> db.createCollection('myComments')
+{ ok: 1 }
+
+//NOW CHECK THE COLLECTIONS
+CWHBlog> show collections
+comments
+myComments
+
+//DELETE THE COLLECTION, COMMAND FOR, db.nameofthecollection.drop()
+CWHBlog> db.myComments.drop()
+true
+
+//NOW CHECK THE COLLECTIONS
+CWHBlog> show collections
+comments
+
+//INSERT ONE ROW IN COMMENTS COLLECTIONS
+CWHBlog> db.comments.insert({ 'name':'Harry', 'lang':'JS', 'member_since': 5})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("63241e5ae63b76ae19f4d534") }
+}
+
+//INSERT MANY ROWS IN COMMENTS COLLECTIONS
+CWHBlog> db.comments.insertMany([{ 'name':'Harry', 'lang':'JS', 'member_since': 5},{ 'name':'Rohan', 'lang':'Python', 'member_since': 3},{ 'name':'Lovish', 'lang':'Java', 'member_since': 4}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63242275e63b76ae19f4d535"),
+    '1': ObjectId("63242275e63b76ae19f4d536"),
+    '2': ObjectId("63242275e63b76ae19f4d537")
+  }
+}
+
+//FIND THE DATA INSERTED IN COMMENTS COLLECTION
+CWHBlog> db.comments.find()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  }
+]
+
+//DISPLAY THE DATA INSERTED IN COMMENTS COLLECTION IN PRETTY FORM
+CWHBlog> db.comments.find().pretty()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  }
+]
+
+//INSERT A NEW DATA IN EXISTED DATA, ADD DATE, FOR THAT WE CHOOSED
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+FROM THE ABOVE DATA, NO NEED TO INSERT OBJECT_ID
+CWHBlog>  db.comments.insert({
+...     'name': 'Harry',
+...     'lang': 'JS',
+...     'member_since': 5,
+...     'date': new Date()
+...   })
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("63242593e63b76ae19f4d538") }
+}
+
+//FIND THE DATA INSERTED IN COMMENTS COLLECTION
+CWHBlog> db.comments.find()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  },
+  {
+    _id: ObjectId("63242593e63b76ae19f4d538"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5,
+    date: ISODate("2022-09-16T07:28:19.563Z")
+  }
+]
+
+//SEARCH IN MONGODB COLLECTIONS
+CWHBlog> db.comments.find({lang:'Python'})
+[
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  }
+]
+CWHBlog>

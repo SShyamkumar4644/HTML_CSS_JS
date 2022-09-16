@@ -43,12 +43,6 @@
 // console.log(a, b, c , d, e, f, g)
 // console.log(typeof d)
 
-// // let a = null;
-// // let b = 567;
-// // let c = true;
-// // let d = BigInt(567) + BigInt(9)
-// // let
-
 // const item={
 //   "harry":true,
 //   "subh":false,
@@ -79,6 +73,7 @@
 // // a1 = 45
 // // a1 = {}
 
+
 // // Chapter 1 - Q4
 // a1['friend'] = "Shubham"  
 // a1['name'] = "Lovish"  
@@ -99,9 +94,9 @@
 
 // console.log("Chapter 2: Operators and expressions begins")
 
-// // 77;
-// // "Harry bhai"
-// // false
+// 77;
+// "Harry bhai"
+// false
 // console.log("Operators in Js")
 // // Arithmetic Operators 
 // let a = 10;
@@ -118,7 +113,7 @@
 // console.log("a = ", a)
 // console.log("a-- = ", a--)
 
-// // Assignment Operators 
+// Assignment Operators 
 // let assignment = 1;
 // assignment += 5 // same as assignment = assignment + 5
 // console.log("a is now = ", a)
@@ -129,7 +124,7 @@
 // assignment /= 5 // same as assignment = assignment / 5
 // console.log("a is now = ", a)
 
-// // Comparison Operators 
+// Comparison Operators 
 // let comp1 = 6;
 // let comp2 = 7;
 // console.log("comp1 == comp2 is ", comp1 == comp2)
@@ -138,7 +133,8 @@
 // console.log("comp1 !== comp2 is ", comp1 !== comp2)
 // console.log("comp1 > comp2 is ", comp1 > comp2)
 
-// // Logical Operators
+
+// Logical Operators
 // let x = 5;
 // let y = 6;
 // console.log(x<y && x==5)
@@ -146,11 +142,11 @@
 // console.log(!false)
 // console.log(!true)
 
-// // Comments
-// // This is a single line comment
-// /* This is a sample multiline comment and a tutorial
-// from 
-// codewithharry */
+// Comments
+// This is a single line comment
+/* This is a sample multiline comment and a tutorial
+from 
+codewithharry */
 
 // console.log("Chapter 2: Operators and expressions ends")
 
@@ -180,7 +176,7 @@
 
 //////////////////////////////
 
-console.log("Chapter 2: Practice Sets begins")
+// console.log("Chapter 2: Practice Sets begins")
 
 // Chapter 2PS
 // Problem No 1
@@ -229,10 +225,76 @@ else {
 */
 
 // Problem No 5
-let age = 19
-let a = age > 18 ? "You can drive" : "You cannot drive"
-console.log(a)
+// let age = 19
+// let a = age > 18 ? "You can drive" : "You cannot drive"
+// console.log(a)
 
-console.log("Chapter 2: Practice Sets ends")
+// console.log("Chapter 2: Practice Sets ends")
 
 //////////////////////////////////
+
+// console.log("For Loops begins")
+
+// // Program to add first n natural numbers
+// let sum = 0
+// let n = prompt("Enter the value of n")
+// n = Number.parseInt(n)
+// for (let i = 0; i < n; i++) {
+//   sum += (i + 1)
+//   // console.log((i+1), "+")
+// }
+// console.log("Sum of first " + n + " natural numbers is " + sum)
+// console.log(i)
+
+
+
+/*
+let obj = {
+  harry: 90,
+  shubh: 45,
+  shivika: 56,
+  ritika: 57,
+  shiv: 23
+}
+
+// For in loop
+for (let a in obj) {
+  console.log("Marks of " + a + " are " + obj[a])
+}
+
+// For of loop
+for (let b of "Harry") {
+  console.log(b)
+}
+*/
+
+// console.log("For Loops ends")
+
+/////////////////////////////
+
+// console.log("While loop begins")
+
+// while loop
+/*
+let n = prompt("Enter the value of n")
+n = Number.parseInt(n)
+
+let i = 0;
+while(i<n){
+  console.log(i)
+  i++;
+}
+*/
+// do-while loop
+// let n = prompt("Enter the value of n")
+// n = Number.parseInt(n)
+
+// let i = 10;
+// do{
+//   console.log(i)
+//   i++;
+// }while (i < n) 
+
+// console.log("While loop ends")
+
+//////////////////////
