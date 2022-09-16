@@ -28,6 +28,20 @@
     'member_since':51
   }, {upsert:true})
 
+  db.comments.update({name: 'Rohan'},
+  {$inc:{
+    member_since: 2
+  }})
+
+  
+  db.comments.update({name: 'Rohan'},
+  {$rename:{
+    member_since: 'member'
+  }})
+
+  db.comments.remove({name: 'Harry'})
+
+  db.comments.find({member_since: {$lt: 90}})
 
   Please enter a MongoDB connection string (Default: mongodb://localhost/):
 
@@ -575,3 +589,148 @@ CWHBlog> db.comments.replaceOne({name:'Shubham'},
 }
 // name:shubham doesn't update, only inside of it updates,
 // doesn't matter name:shubham
+
+//IF YOU WANT TO UPDATE LET'S SAY YOU WANT TO INCREMENT MEMBER_SINCE BY 2 SO
+//THIS IS THE COMMAND
+CWHBlog> db.comments.update({ name: 'Rohan' }, { $inc: { member_since: 2 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+//FIND OUT IN ROHAN SECTION IF THE MEMBER_SINCE IS INCREMENTED
+CWHBlog> db.comments.find()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 51
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  },
+  {
+    _id: ObjectId("63242593e63b76ae19f4d538"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5,
+    date: ISODate("2022-09-16T07:28:19.563Z")
+  },
+  {
+    _id: ObjectId("632464dbcc99825a9fe5b845"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 51
+  }
+]
+
+//IF YOU WANT TO MEMBER_SINCE TO MEMBER ONLY FOR ROHAN THEN USE 
+//THIS COMMAND
+CWHBlog>   db.comments.update({name: 'Rohan'},
+...   {$rename:{
+.....     member_since: 'member'
+.....   }})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+//NOW FIND OUT IF IT IS UPDATED
+CWHBlog> db.comments.find()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 51
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  },
+  {
+    _id: ObjectId("63242593e63b76ae19f4d538"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5,
+    date: ISODate("2022-09-16T07:28:19.563Z")
+  },
+  {
+    _id: ObjectId("632464dbcc99825a9fe5b845"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 51
+  }
+]
+
+//REMOVE THE ROWS THAT HAS NAME:HARRY ONLY
+CWHBlog> db.comments.remove({name: 'Harry'})
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+{ acknowledged: true, deletedCount: 4 }
+
+//NOW FIND OUT IF IT IS REMOVED
+CWHBlog> db.comments.find()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  }
+]
+
+// SHOW THE MEMBER_SINCE WHICH IS LESS THAN 90 $lt:90
+CWHBlog> db.comments.find({member_since: {$lt: 90}})
+[
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  }
+]
