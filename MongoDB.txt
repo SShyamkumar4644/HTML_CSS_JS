@@ -6,6 +6,29 @@
     'date': new Date()
   })
 
+
+  db.comments.replaceOne({name:'Harry'},
+  {
+    'name':'Harry',
+    'lang':'JS',
+    'member_since':51
+  })
+
+    db.comments.replaceOne({name:'Harry22'},
+  {
+    'name':'Harry',
+    'lang':'JS',
+    'member_since':51
+  })
+
+    db.comments.replaceOne({name:'Shubham'},
+  {
+    'name':'Harry',
+    'lang':'JS',
+    'member_since':51
+  }, {upsert:true})
+
+
   Please enter a MongoDB connection string (Default: mongodb://localhost/):
 
 Current Mongosh Log ID: 6324186ba168be3932c58e9c
@@ -208,7 +231,7 @@ CWHBlog> db.comments.find().pretty()
     lang: 'JS',
     member_since: 5
   },
-FROM THE ABOVE DATA, NO NEED TO INSERT OBJECT_ID
+// FROM THE ABOVE DATA, NO NEED TO INSERT OBJECT_ID
 CWHBlog>  db.comments.insert({
 ...     'name': 'Harry',
 ...     'lang': 'JS',
@@ -267,4 +290,288 @@ CWHBlog> db.comments.find({lang:'Python'})
     member_since: 3
   }
 ]
-CWHBlog>
+
+//FIND THE DATA THAT IS HVING LANG:PYTHON
+CWHBlog> db.comments.find({lang:'Python'})
+[
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  }
+]
+
+//IF YOU TRY TO FIND WHICH DOESN'T EXISTS IT WILL SHOW BLANK
+CWHBlog> db.comments.find({lang:'Python', 'name':'Harry'})
+
+//IF YOU TRY TO FIND WHICH DOESN'T EXISTS IT WILL SHOW BLANK, MENTION THE
+//RIGHT DATA
+CWHBlog> db.comments.find({lang:'Python', 'name':'Rohan'})
+[
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  }
+]
+
+//FIND THE DATA, ALIGN IT PROPERLY USING PRETTY AND FIND ONLY 2 DATA'S, FIRST TWO
+CWHBlog> db.comments.find().pretty().limit(2)
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  }
+]
+
+//FIND THE DATA, ALIGN IT PROPERLY USING PRETTY AND FIND ONLY FIRST DATA, FIRST ONE
+CWHBlog> db.comments.find().pretty().limit(1)
+[ { _id: ObjectId("63241e23e63b76ae19f4d533") } ]
+
+//FIND ONLY ONE OUTPUT
+CWHBlog> db.comments.find().pretty().limit(1).count()
+1
+
+//FIND ONLY TWO OUTPUT
+CWHBlog> db.comments.find().pretty().limit(2).count()
+2
+
+//FIND TOTAL OUTPUTS
+CWHBlog> db.comments.find().count()
+6
+CWHBlog> db.comments.find().pretty().limit(2).count()
+2
+
+//FIND DATA THAT IS HAVING HARRY
+CWHBlog> db.comments.find({name: 'Harry'}).count()
+3
+
+//FIND DATA THAT IS HAVING ROHAN
+CWHBlog> db.comments.find({ name: 'Rohan' }).count()
+1
+
+//SORT THAT DATA IN ASCENDING ORDER MENTION 1
+CWHBlog> db.comments.find().sort({member_since:1}).pretty()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242593e63b76ae19f4d538"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5,
+    date: ISODate("2022-09-16T07:28:19.563Z")
+  }
+]
+
+//SORT THAT DATA IN DESCENDING ORDER MENTION -1
+CWHBlog> db.comments.find().sort({member_since:-1}).pretty()
+[
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242593e63b76ae19f4d538"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5,
+    date: ISODate("2022-09-16T07:28:19.563Z")
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  },
+  { _id: ObjectId("63241e23e63b76ae19f4d533") }
+]
+
+//FIND ONLY ONE DATA THAT HAS HARRY
+CWHBlog> db.comments.findOne({name:'Harry'})
+{
+  _id: ObjectId("63241e5ae63b76ae19f4d534"),
+  name: 'Harry',
+  lang: 'JS',
+  member_since: 5
+}
+
+//UPDATE THE DATA, UPDATE MIGHT WORK, FOR THAT USE replaceOne() function
+//WHICH WORKS THE SAME
+CWHBlog> db.comments.update({name:'Harry'},
+...   {
+.....     'name':'Harry',
+.....     'lang':'JS',
+.....     'member_since':51
+.....   })
+DeprecationWarning: Collection.update() is deprecated. Use updateOne, updateMany, or bulkWrite.
+MongoInvalidArgumentError: Update document requires atomic operators
+CWHBlog> db.comments.find()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  },
+  {
+    _id: ObjectId("63242593e63b76ae19f4d538"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5,
+    date: ISODate("2022-09-16T07:28:19.563Z")
+  }
+]
+
+//UPDATEONE() MIGHT NOT ALSO WORK
+CWHBlog> db.comments.updateOne({ name: 'Harry' }, { 'name': 'Harry', 'lang': 'JS', 'member_since': 51 })
+MongoInvalidArgumentError: Update document requires atomic operators
+CWHBlog>  db.comments.updateOne({name:'Harry'},
+...   {
+.....     'name':'Harry',
+.....     'lang':'JS',
+.....     'member_since':51
+.....   })
+MongoInvalidArgumentError: Update document requires atomic operators
+
+//USE REPLACEONE, SYNTAX IS FIND name:Harry AND UPDATE THE DATA, WHAT YOU WANT
+// YOU WILL GET
+/* {
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1, //WHICH SAYS HARRY NAME IS MATCHED
+  modifiedCount: 1, // YES YOU HAVE MODIFIED member_since:5 to 51, SO IT SHOWS ONE
+  upsertedCount: 0
+}*/
+
+//FIND IF THE DATA IS UPDATED
+CWHBlog> db.comments.find()
+[
+  { _id: ObjectId("63241e23e63b76ae19f4d533") },
+  {
+    _id: ObjectId("63241e5ae63b76ae19f4d534"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 51
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d535"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d536"),
+    name: 'Rohan',
+    lang: 'Python',
+    member_since: 3
+  },
+  {
+    _id: ObjectId("63242275e63b76ae19f4d537"),
+    name: 'Lovish',
+    lang: 'Java',
+    member_since: 4
+  },
+  {
+    _id: ObjectId("63242593e63b76ae19f4d538"),
+    name: 'Harry',
+    lang: 'JS',
+    member_since: 5,
+    date: ISODate("2022-09-16T07:28:19.563Z")
+  }
+]
+
+// IF YOU TRY TO UPDATE DATA WHICH DOESN'T EXISTS, ALL WILL SHOW ZERO
+CWHBlog> db.comments.replaceOne({name:'Harry22'},
+...   {
+.....     'name':'Harry',
+.....     'lang':'JS',
+.....     'member_since':51
+.....   })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+//WHAT IS upsertedCount()?
+//IF YOU WANT TO INSERT DATA THAT DOESN'T EXISTS, NEW DATA SHUBHAM NAME
+// THEN MENTION {upsert:true} CONDITION TO UPDATE THE DATA
+CWHBlog> db.comments.replaceOne({name:'Shubham'},
+...   {
+.....     'name':'Harry',
+.....     'lang':'JS',
+.....     'member_since':51
+.....   }, {upsert:true})
+{
+  acknowledged: true,
+  insertedId: ObjectId("632464dbcc99825a9fe5b845"),
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 1
+}
+// name:shubham doesn't update, only inside of it updates,
+// doesn't matter name:shubham
