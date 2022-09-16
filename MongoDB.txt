@@ -52,6 +52,10 @@ CWHBlog   40.00 KiB
 admin     40.00 KiB
 config   108.00 KiB
 local     72.00 KiB
+// Anyone wondering why after "use  <database name>" , 
+// database is not showing on "show dbs" command .This is 
+// because database is empty ,so you have to create collection 
+// in database first and then that new database will show.
 
 //CHECK IN WHICH DATABASE YOU ARE IN NOW
 comments> db
