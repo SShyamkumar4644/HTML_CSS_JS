@@ -43,6 +43,12 @@
 // console.log(a, b, c , d, e, f, g)
 // console.log(typeof d)
 
+// // let a = null;
+// // let b = 567;
+// // let c = true;
+// // let d = BigInt(567) + BigInt(9)
+// // let
+
 // const item={
 //   "harry":true,
 //   "subh":false,
@@ -73,7 +79,6 @@
 // // a1 = 45
 // // a1 = {}
 
-
 // // Chapter 1 - Q4
 // a1['friend'] = "Shubham"  
 // a1['name'] = "Lovish"  
@@ -94,9 +99,9 @@
 
 // console.log("Chapter 2: Operators and expressions begins")
 
-// 77;
-// "Harry bhai"
-// false
+// // 77;
+// // "Harry bhai"
+// // false
 // console.log("Operators in Js")
 // // Arithmetic Operators 
 // let a = 10;
@@ -113,7 +118,7 @@
 // console.log("a = ", a)
 // console.log("a-- = ", a--)
 
-// Assignment Operators 
+// // Assignment Operators 
 // let assignment = 1;
 // assignment += 5 // same as assignment = assignment + 5
 // console.log("a is now = ", a)
@@ -124,7 +129,7 @@
 // assignment /= 5 // same as assignment = assignment / 5
 // console.log("a is now = ", a)
 
-// Comparison Operators 
+// // Comparison Operators 
 // let comp1 = 6;
 // let comp2 = 7;
 // console.log("comp1 == comp2 is ", comp1 == comp2)
@@ -133,8 +138,7 @@
 // console.log("comp1 !== comp2 is ", comp1 !== comp2)
 // console.log("comp1 > comp2 is ", comp1 > comp2)
 
-
-// Logical Operators
+// // Logical Operators
 // let x = 5;
 // let y = 6;
 // console.log(x<y && x==5)
@@ -142,11 +146,11 @@
 // console.log(!false)
 // console.log(!true)
 
-// Comments
-// This is a single line comment
-/* This is a sample multiline comment and a tutorial
-from 
-codewithharry */
+// // Comments
+// // This is a single line comment
+// /* This is a sample multiline comment and a tutorial
+// from 
+// codewithharry */
 
 // console.log("Chapter 2: Operators and expressions ends")
 
@@ -176,7 +180,7 @@ codewithharry */
 
 //////////////////////////////
 
-// console.log("Chapter 2: Practice Sets begins")
+console.log("Chapter 2: Practice Sets begins")
 
 // Chapter 2PS
 // Problem No 1
@@ -285,7 +289,7 @@ while(i<n){
   i++;
 }
 */
-// do-while loop
+// while loop
 // let n = prompt("Enter the value of n")
 // n = Number.parseInt(n)
 
@@ -298,3 +302,51 @@ while(i<n){
 // console.log("While loop ends")
 
 //////////////////////
+
+console.log("Function starts")
+
+const hello = () => {
+  console.log("Hey how are you. I am toh fine yaar")
+  return "hi"
+}
+
+function onePlusAvg(x, y) {
+  return 1 + (x + y) / 2
+}
+
+const sum = (p, q) => {
+  return p + q
+}
+
+let a = 1;
+let b = 2;
+let c = 3;
+let v = hello();
+console.log(v) // prints hi
+hello(); //invokes the function of hello and prints console.log stmt
+console.log("One plus Average of a and b is ", onePlusAvg(a, b))
+console.log("One plus Average of b and c is ", onePlusAvg(b, c))
+console.log("One plus Average of a and c is ", onePlusAvg(a, c))
+console.log(sum(9, 7))
+
+
+console.log("Functions ends")
+
+///////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
