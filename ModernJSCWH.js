@@ -180,7 +180,7 @@
 
 //////////////////////////////
 
-console.log("Chapter 2: Practice Sets begins")
+// console.log("Chapter 2: Practice Sets begins")
 
 // Chapter 2PS
 // Problem No 1
@@ -303,38 +303,225 @@ while(i<n){
 
 //////////////////////
 
-console.log("Function starts")
+// console.log("Function starts")
 
-const hello = () => {
-  console.log("Hey how are you. I am toh fine yaar")
-  return "hi"
+// const hello = () => {
+//   console.log("Hey how are you. I am toh fine yaar")
+//   return "hi"
+// }
+
+// function onePlusAvg(x, y) {
+//   return 1 + (x + y) / 2
+// }
+
+// const sum = (p, q) => {
+//   return p + q
+// }
+
+// let a = 1;
+// let b = 2;
+// let c = 3;
+// let v = hello();
+// console.log(v)
+// hello();
+// console.log("One plus Average of a and b is ", onePlusAvg(a, b))
+// console.log("One plus Average of b and c is ", onePlusAvg(b, c))
+// console.log("One plus Average of a and c is ", onePlusAvg(a, c))
+// console.log(sum(9, 7))
+
+
+// console.log("Functions ends")
+
+/////////////////////////////
+
+// console.log("Chapter 3 practice sets starts")
+
+let marks = {
+  harry: 90,
+  shubham: 9,
+  lovish: 56,
+  Monika: 4
+}
+// Problem No 1
+for (let i = 0; i < Object.keys(marks).length; i++) {
+  // console.log("The marks of " + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]])
 }
 
-function onePlusAvg(x, y) {
-  return 1 + (x + y) / 2
+// Problem No 2
+// for (let key in marks) {
+//   console.log("The marks of " + key + " are " + marks[key])
+// }
+//This for in loop creates less code
+//but same output, which output in 
+//problem gives same output but //lengthy codes
+//prints the keys and also prints
+//the marks of individual keys
+
+// Problem No 3
+// let cn = 43
+// let i
+// while (i != cn) {
+//   console.log("Try again")
+//   i = prompt("Enter a number")
+// }
+// console.log("You have entered a correct number")
+
+// Problem No 4
+// const mean = (a, b, c, d) => {
+//   return (a + b + c + d) / 4
+// }
+
+// console.log(mean(4, 5, 6, 7))
+// console.log("Chapter 3 practice sets ends")
+
+////////////////////////////
+
+// console.log("Strings starts")
+
+// let name = "Harry"
+// console.log(name.length)
+// console.log(name[0])
+// console.log(name[1])
+// let friend = 'Prakash'
+// console.log(friend)
+// let myfriend = "Shubh' // Dont do this
+// console.log(myfriend)
+
+// Template literals
+// let boy1 = "Pramod"
+// let boy2 = "Nikhil"
+// Nikhil is a friend of Pramod
+// let sentence = `${boy2} is a friend of ${boy1}`
+// console.log(sentence)
+
+// Escape Sequence Characters
+// let fruit = 'Bana\'na'
+// console.log(fruit)
+// let fruit = "Bana\"na"
+// console.log(fruit)
+
+//Backticks is String interpolation //concept itself
+
+// console.log("Strings ends")
+
+///////////////////////////////
+
+// console.log("Strings methods starts")
+
+let name = "Harry"
+// console.log(name.length)
+
+// console.log(name.toUpperCase())
+// console.log(name.toLowerCase())
+// console.log(name.slice(2, 4))
+// console.log(name.slice(2))
+// console.log(name.replace("Har", "Per"))
+// let friend = "Naman"
+// console.log(name.concat(" is a friend of ", friend, " Ok"))
+// let friend2 = "      Meena        "
+// console.log(friend2)
+// console.log(friend2.trim())
+let fr = "Raman" + "Shivika" + "Harry"
+// console.log(fr[0])
+// console.log(fr[1])
+// console.log(fr[2])
+// console.log(fr[3])
+// fr[4]= "o" // This is not possible 
+// console.log(fr)
+// QuickQuiz: Use a for loop to print a string
+
+for(let i in fr){
+  // console.log(fr[i])
 }
 
-const sum = (p, q) => {
-  return p + q
-}
+// console.log("Strings methods ends")
 
-let a = 1;
-let b = 2;
-let c = 3;
-let v = hello();
-console.log(v) // prints hi
-hello(); //invokes the function of hello and prints console.log stmt
-console.log("One plus Average of a and b is ", onePlusAvg(a, b))
-console.log("One plus Average of b and c is ", onePlusAvg(b, c))
-console.log("One plus Average of a and c is ", onePlusAvg(a, c))
-console.log(sum(9, 7))
+////////////////////////
+
+// console.log("Practice Strings starts")
+
+// Chapter 4 - Practice Set
+// Problem 1
+// let str = "Har\""
+// console.log(str.length)
+
+// Problem 2
+// const sentence = 'The quick brown fox jumps over the lazy dog.';
+// const word = 'fox2';
+// console.log(sentence.includes(word))
+// console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
+
+// Problem 3
+// console.log(word.toLowerCase())
+// console.log(word.toUpperCase())
+
+// Problem 4
+// let str2 = "Please give Rs 1000"
+// let amount = Number.parseInt(str2.slice(15))
+// console.log(amount)
+// console.log(typeof amount)
+
+// Problem 5
+// let friend = "Deepika"
+// friend[3] = "R"
+// console.log(friend) // friend is not changed, because string is immutable
+
+// console.log("Practice Strings ends")
+
+/////////////////////////////////
+
+// console.log("Chapter 5 Arrays starts")
+
+// let marks_class_12 = [91, 82, 63, 84, false, "Not Present"]
+// console.log(marks_class_12[0])
+// console.log(marks_class_12[1])
+// console.log(marks_class_12[2])
+// console.log(marks_class_12[3])
+// console.log(marks_class_12[4])
+// console.log(marks_class_12[5])
+// console.log(marks_class_12[6]) // Will be undefined because index 6 does not exist
+// console.log("The length of marks_class_12 is", marks_class_12.length)
+// marks_class_12[6] = 89 // Adding a new value to the array
+// marks_class_12[0] = 96 // Changing the value of an array
+// console.log(marks_class_12)
+// console.log(typeof marks_class_12)
 
 
-console.log("Functions ends")
+// console.log("Chapter 5 Arrays ends")
 
-///////////////////////////////////////////////
+//////////////////////////
+
+// console.log("Arrays methods starts")
+
+// Array Methods
+// let num = [1, 2, 3, 34, 4]
+// let b = num.toString() // b is now a string 
+// console.log(b, typeof b)
+// let c = num.join(" and ")
+// console.log(c, typeof c)
+// let r = num.pop() // pop returns the popped element
+// console.log(num, r)
+// let r = num.push(56) // push returns the new array length
+// console.log(num, r)
+// let r = num.shift()
+// console.log(r, num) // Removes an element from the start of the array
+
+// let r = num.unshift(78)
+// console.log(r, num)
+// console.log(r)
+
+// console.log("Arrays methods ends")
 
 
+///////////////////////////
+
+console.log("Arrays some more methods starts")
+
+
+let num =[1,2,3,4,5,6,7,8,9]
+
+
+console.log("Arrays some more methods ends")
 
 
 
