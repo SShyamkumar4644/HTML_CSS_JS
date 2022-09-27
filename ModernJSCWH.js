@@ -515,7 +515,7 @@ for(let i in fr){
 
 ///////////////////////////
 
-console.log("Arrays some more methods starts")
+// console.log("Arrays some more methods starts")
 
 // let num =[1,2,3,4,5,6,7,8,9]
 // console.log(num)
@@ -542,10 +542,10 @@ console.log("Arrays some more methods starts")
 // console.log(num)
 //it is sorted in alphabet format, //numbers are considered as strings //and sorted, if num.sort()
 
-// let num1 = [551, 22, 3, 14, 5, 6, 7, 8, 229]
-// num1.splice(2,3,1021,1022,1023)
-// // from index 2 , delete 3 elements and add these 3 elements
-// console.log(num1)
+// let num = [551, 22, 3, 14, 5, 6, 7, 8, 229]
+// num.splice(2,3,1021,1022,1023)
+//from index 2 , delete 3 elements and add these 3 elements
+// console.log(num)
 
 // let num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // let num_more = [11, 12, 13, 14, 15, 16, 17, 18, 19]
@@ -568,21 +568,118 @@ console.log("Arrays some more methods starts")
 // console.log(num)
 
 // Splice and Slice
-let num = [551, 22, 3, 14, 5, 6, 7, 8, 229]
-// console.log(num)
+// let num = [551, 22, 3, 14, 5, 6, 7, 8, 229]
 // let deletedValues = num.splice(2, 4, 1021, 1022, 1023, 1024, 1025)
 // console.log(num)
 // console.log(deletedValues)
 
 // let newNum = num.slice(3)
-let newNum = num.slice(3, 5)
-console.log(newNum)
+// let newNum = num.slice(3, 5)
+// console.log(newNum)
 
-console.log("Arrays some more methods ends")
+// console.log("Arrays some more methods ends")
 
 //////////////////////////////
 
+// console.log("Loops with arrays starts")
 
+// let num = [3, 5, 1, 2, 4]
+
+// for(let i=0; i<num.length;i++){
+//   console.log(num[i])
+// }
+
+// ForEach Loop
+// num.forEach((element) => {
+//   console.log(element * element)
+// })
+
+// Array.from 
+// let name = "Harry"
+// let arr = Array.from(name)
+// console.log(arr)
+
+// for...of 
+// for (let item of num){
+//   console.log(item)
+// }
+
+// for...in
+// for (let i in num){
+//   console.log(num[i])
+// }
+
+// console.log("Loops with arrays ends")
+
+////////////////////////////
+
+console.log("map filter reduce starts")
+
+let arr = [45, 23, 21]
+let a = arr.map((value) =>{
+  console.log(value)
+  return value
+})
+
+console.log(a)
+
+
+//map creates new array, but foreach iterates in same array
+
+let arr2 = [45, 23, 21, 0, 3, 5]
+let a2 = arr2.filter((a) =>{
+  return a<10
+})
+console.log(a2)
+//this filter method returns which numbers are less than 10 only
+//after this, it wont modify the original array
+
+let arr3 = [1,2,3,5,2,1]
+let newarr3 = arr3.reduce((h1, h2)=>{
+  return h1 + h2
+})
+console.log(newarr3)
+
+const numbers = [1,2,3,4,5]
+console.log(numbers)
+console.log(numbers.splice(2,1,23,24))
+console.log(numbers)
+// 1+2 =3, you get value as 3
+// do same thing for next value
+// you got value as 3, next value is 3, 3+3=6
+//next 6+5=11
+//next 11+2=13
+//last 13+1=14
+
+//FILTER RETURNS VALUE
+//MAP AND REDUCE RETURNS ARRAY
+
+// let arr = [45, 23, 21]
+// // Array map method
+// let a = arr.map((value, index, array) => {
+//   // console.log(value, index, array)
+//   return value + index
+// })
+// // console.log(arr)
+
+// Array filter method
+// let arr2 = [45, 23, 21, 0, 3, 5]
+// let a2 = arr2.filter((a) => {
+//   return a < 10
+// })
+// console.log(a2, arr2)
+
+// Array reduce method
+// let arr3 = [1, 2, 3, 5, 2, 1]
+// const reduce_func = (h1, h2) => {
+//   return h1 + h2
+// }
+// let newarr3 = arr3.reduce(reduce_func)
+// console.log(newarr3)
+
+console.log("map filter reduce ends")
+
+/////////////////////////////////
 
 
 
