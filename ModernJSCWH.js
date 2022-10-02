@@ -613,37 +613,37 @@ for(let i in fr){
 
 ////////////////////////////
 
-console.log("map filter reduce starts")
+// console.log("map filter reduce starts")
 
-let arr = [45, 23, 21]
-let a = arr.map((value) =>{
-  console.log(value)
-  return value
-})
+// let arr = [45, 23, 21]
+// let a = arr.map((value) =>{
+//   console.log(value)
+//   return value
+// })
 
-console.log(a)
+// console.log(a)
 
 
 //map creates new array, but foreach iterates in same array
 
-let arr2 = [45, 23, 21, 0, 3, 5]
-let a2 = arr2.filter((a) =>{
-  return a<10
-})
-console.log(a2)
+// let arr2 = [45, 23, 21, 0, 3, 5]
+// let a2 = arr2.filter((a) =>{
+//   return a<10
+// })
+// console.log(a2)
 //this filter method returns which numbers are less than 10 only
 //after this, it wont modify the original array
 
-let arr3 = [1,2,3,5,2,1]
-let newarr3 = arr3.reduce((h1, h2)=>{
-  return h1 + h2
-})
-console.log(newarr3)
+// let arr3 = [1,2,3,5,2,1]
+// let newarr3 = arr3.reduce((h1, h2)=>{
+//   return h1 + h2
+// })
+// console.log(newarr3)
 
-const numbers = [1,2,3,4,5]
-console.log(numbers)
-console.log(numbers.splice(2,1,23,24))
-console.log(numbers)
+// const numbers = [1,2,3,4,5]
+// console.log(numbers)
+// console.log(numbers.splice(2,1,23,24))
+// console.log(numbers)
 // 1+2 =3, you get value as 3
 // do same thing for next value
 // you got value as 3, next value is 3, 3+3=6
@@ -677,9 +677,97 @@ console.log(numbers)
 // let newarr3 = arr3.reduce(reduce_func)
 // console.log(newarr3)
 
-console.log("map filter reduce ends")
+// console.log("map filter reduce ends")
 
 /////////////////////////////////
+
+// console.log("JS Console object starts")
+
+// console.log("log")
+// console.info("info")
+// console.warn("warn")
+// console.error("err")
+// console.assert("err" != false)
+// console.assert("err" == false)
+
+// console.time("forLoop")
+
+// for (let i = 0; i < 500; i++) {
+//   console.log(233)
+// }
+
+// console.timeEnd("forLoop")
+
+// console.time("whileLoop")
+
+// let i = 0;
+// while (i < 500) {
+//   console.log(233)
+//   i++;
+// }
+
+// console.timeEnd("whileLoop")
+
+// console.log("JS Console object ends")
+
+////////////////////////////////////////////////
+
+console.log("setTimeout and setInterval starts")
+
+// alert("hello")
+
+// setTimeout(function() {
+//   alert("I am inside setTimeout")
+// }, 2000)
+//this is used to display output after some time
+
+// setTimeout(function(){
+//   alert("running after 2 seconds")
+// }, 2000)
+
+// let a = setTimeout(function() {
+//   alert("I am inside setTimeout")
+// }, 2000)
+//this is used to display output after some time
+
+// let b = prompt("Do you want to run the settimout?")
+// if ("n" == b) {
+//   clearTimeout(a)
+// }
+//this will show you the prompt whether you want to run setTimeout
+//if no type n then it will not show the output which shows
+//after 2 seconds
+
+// clearTimeout(a)//stops execution of setTimeout
+// console.log(a)// you will get 1 as output in console cause 
+//it is showing its ID
+
+//setTimeout: execute after sometime
+//setInterval: execute after after time, like infinite loop
+
+// setInterval(function() {
+//   alert("running continous every 3 seconds")
+// }, 3000)
+
+// const sum = (a, b, c) => {
+//   console.log("Yes I am running " + (a + b + c))
+//   a + b
+// }
+
+// setTimeout(sum, 1000, 1, 2, 7)
+
+
+// console.log("setTimeout and setInterval ends")
+
+/////////////////////////////////
+
+console.log("browser events starts")
+
+
+console.log("Check notes in ModernJSCWH.html file")
+
+
+console.log("browser events ends")
 
 
 
