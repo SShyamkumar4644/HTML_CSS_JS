@@ -761,13 +761,43 @@ console.log("setTimeout and setInterval starts")
 
 /////////////////////////////////
 
-console.log("browser events starts")
+// console.log("browser events starts")
 
 
-console.log("Check notes in ModernJSCWH.html file")
+// console.log("Check notes in ModernJSCWH.html file")
 
 
-console.log("browser events ends")
+// console.log("browser events ends")
+
+///////////////////////////////////////
+
+// console.log("Walking the DOM starts")
+
+//you can't do DOM manipulation without html file
+
+//document.head
+//document.title
+//document.body
+//document.documentElement
+//typeof document.title
+//Do these things in any websites you go in, example: codewithharry.com
+
+// console.log("Walking the DOM ends")
+
+////////////////////////////
+
+// console.log("accessing children of an element starts")
+
+// console.log(document.body.lastChild)
+// let arr = Array.from(document.body.childNodes)
+// console.log(arr)
+// console.log(document.body.childNodes)
+
+// console.log(document.body.firstChild)
+
+// console.log("accessing children of an element ends")
+
+///////////////////////////////////
 
 
 
