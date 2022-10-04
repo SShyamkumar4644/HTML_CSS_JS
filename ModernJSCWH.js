@@ -80,8 +80,8 @@
 // // a1 = {}
 
 // // Chapter 1 - Q4
-// a1['friend'] = "Shubham"  
-// a1['name'] = "Lovish"  
+// a1['friend'] = "Shubham"
+// a1['name'] = "Lovish"
 // console.log(a1)
 
 // // Chapter 1 - Q5
@@ -103,7 +103,7 @@
 // // "Harry bhai"
 // // false
 // console.log("Operators in Js")
-// // Arithmetic Operators 
+// // Arithmetic Operators
 // let a = 10;
 // let b = 4;
 // console.log("a + b = ", a + b)
@@ -118,7 +118,7 @@
 // console.log("a = ", a)
 // console.log("a-- = ", a--)
 
-// // Assignment Operators 
+// // Assignment Operators
 // let assignment = 1;
 // assignment += 5 // same as assignment = assignment + 5
 // console.log("a is now = ", a)
@@ -129,7 +129,7 @@
 // assignment /= 5 // same as assignment = assignment / 5
 // console.log("a is now = ", a)
 
-// // Comparison Operators 
+// // Comparison Operators
 // let comp1 = 6;
 // let comp2 = 7;
 // console.log("comp1 == comp2 is ", comp1 == comp2)
@@ -149,7 +149,7 @@
 // // Comments
 // // This is a single line comment
 // /* This is a sample multiline comment and a tutorial
-// from 
+// from
 // codewithharry */
 
 // console.log("Chapter 2: Operators and expressions ends")
@@ -250,8 +250,6 @@ else {
 // console.log("Sum of first " + n + " natural numbers is " + sum)
 // console.log(i)
 
-
-
 /*
 let obj = {
   harry: 90,
@@ -297,7 +295,7 @@ while(i<n){
 // do{
 //   console.log(i)
 //   i++;
-// }while (i < n) 
+// }while (i < n)
 
 // console.log("While loop ends")
 
@@ -329,7 +327,6 @@ while(i<n){
 // console.log("One plus Average of a and c is ", onePlusAvg(a, c))
 // console.log(sum(9, 7))
 
-
 // console.log("Functions ends")
 
 /////////////////////////////
@@ -340,8 +337,8 @@ let marks = {
   harry: 90,
   shubham: 9,
   lovish: 56,
-  Monika: 4
-}
+  Monika: 4,
+};
 // Problem No 1
 for (let i = 0; i < Object.keys(marks).length; i++) {
   // console.log("The marks of " + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]])
@@ -352,7 +349,7 @@ for (let i = 0; i < Object.keys(marks).length; i++) {
 //   console.log("The marks of " + key + " are " + marks[key])
 // }
 //This for in loop creates less code
-//but same output, which output in 
+//but same output, which output in
 //problem gives same output but //lengthy codes
 //prints the keys and also prints
 //the marks of individual keys
@@ -408,7 +405,7 @@ for (let i = 0; i < Object.keys(marks).length; i++) {
 
 // console.log("Strings methods starts")
 
-let name = "Harry"
+let name = "Harry";
 // console.log(name.length)
 
 // console.log(name.toUpperCase())
@@ -421,16 +418,16 @@ let name = "Harry"
 // let friend2 = "      Meena        "
 // console.log(friend2)
 // console.log(friend2.trim())
-let fr = "Raman" + "Shivika" + "Harry"
+let fr = "Raman" + "Shivika" + "Harry";
 // console.log(fr[0])
 // console.log(fr[1])
 // console.log(fr[2])
 // console.log(fr[3])
-// fr[4]= "o" // This is not possible 
+// fr[4]= "o" // This is not possible
 // console.log(fr)
 // QuickQuiz: Use a for loop to print a string
 
-for(let i in fr){
+for (let i in fr) {
   // console.log(fr[i])
 }
 
@@ -486,7 +483,6 @@ for(let i in fr){
 // console.log(marks_class_12)
 // console.log(typeof marks_class_12)
 
-
 // console.log("Chapter 5 Arrays ends")
 
 //////////////////////////
@@ -495,7 +491,7 @@ for(let i in fr){
 
 // Array Methods
 // let num = [1, 2, 3, 34, 4]
-// let b = num.toString() // b is now a string 
+// let b = num.toString() // b is now a string
 // console.log(b, typeof b)
 // let c = num.join(" and ")
 // console.log(c, typeof c)
@@ -511,7 +507,6 @@ for(let i in fr){
 // console.log(r)
 
 // console.log("Arrays methods ends")
-
 
 ///////////////////////////
 
@@ -594,12 +589,12 @@ for(let i in fr){
 //   console.log(element * element)
 // })
 
-// Array.from 
+// Array.from
 // let name = "Harry"
 // let arr = Array.from(name)
 // console.log(arr)
 
-// for...of 
+// for...of
 // for (let item of num){
 //   console.log(item)
 // }
@@ -622,7 +617,6 @@ for(let i in fr){
 // })
 
 // console.log(a)
-
 
 //map creates new array, but foreach iterates in same array
 
@@ -712,7 +706,7 @@ for(let i in fr){
 
 ////////////////////////////////////////////////
 
-console.log("setTimeout and setInterval starts")
+console.log("setTimeout and setInterval starts");
 
 // alert("hello")
 
@@ -739,7 +733,7 @@ console.log("setTimeout and setInterval starts")
 //after 2 seconds
 
 // clearTimeout(a)//stops execution of setTimeout
-// console.log(a)// you will get 1 as output in console cause 
+// console.log(a)// you will get 1 as output in console cause
 //it is showing its ID
 
 //setTimeout: execute after sometime
@@ -756,16 +750,13 @@ console.log("setTimeout and setInterval starts")
 
 // setTimeout(sum, 1000, 1, 2, 7)
 
-
 // console.log("setTimeout and setInterval ends")
 
 /////////////////////////////////
 
 // console.log("browser events starts")
 
-
 // console.log("Check notes in ModernJSCWH.html file")
-
 
 // console.log("browser events ends")
 
@@ -799,15 +790,158 @@ console.log("setTimeout and setInterval starts")
 
 ///////////////////////////////////
 
+console.log("callbacks starts");
 
+//Synchronous programming: executes code line by line
+//execute all lines in order to see output
+// let a = prompt("enter your name")
+// let b = prompt("enter your age")
+// console.log("Hey " + a + "and your age is " + b);
 
+//Asynchronous programming: first start will print, then end will
+//print and after 3 seconds I'm running wil be printed
+//setTimeout will be running in background, and after 3 second
+//setTimeout will show output
+// console.log("start")
+// setTimeout(function(){
+//   console.log("I'm running")
+// }, 3000);
+// console.log("end")
 
+//Callbacks, final code
+function loadScript(src, callback) {
+  var script = document.createElement("script");
+  script.src = src;
+  script.onload = function () {
+    console.log("Loaded script with SRC: " + src);
+    callback(null, src);
+  };
+  script.onerror = function () {
+    console.log("Error loading script with SRC: " + src);
+    callback(new Error("Src got some error"));
+  };
+  document.body.appendChild(script);
+}
 
+function hello(error, src) {
+  if (error) {
+    console.log(error);
+    return;
+  }
+  alert("Hello World!" + src);
+}
 
+function goodmorning(error, src) {
+  if (error) {
+    console.log(error);
+    return;
+  }
+  alert("Good morning" + src);
+}
 
+loadScript(
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
+  goodmorning
+);
+//this code tells that when you load this boostrap script along with that
+//after loading the script, execute the function also, lets say goodmorning function
+//two functions are created, run anyone of them, your choice
+//now in line 841, loadcript will be exceute boostap script code, along with that
+//it will call the function hello, it will show the alert prompt
+//in functionloadscript, mention callback, pass name as function,
 
+// next callback must print something,
+// function loadScript(src, callback) {
+//   var script = document.createElement("script");
+//   script.src = src;
+//   script.onload = function () {
+//     console.log("Loaded script with SRC: " + src);
+//     callback(src);
+//   };
+//   document.body.appendChild(script);
+// }
+// function hello(src){
+//   alert("hello world" + src);
+// }
 
+// function goodmorning(src){
+//   alert("goodmorning" + src);
+// }
 
+// loadScript(
+//   "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
+//   hello
+// );
 
+//print the script code along with function
 
+// function loadScript(src, callback){
+//   var script = document.createElement("script");
+//   script.src = src;
+//   script.onload = function() {
+//     console.log("Loaded script with SRC: " + src)
+//     callback(src);/  print src also
+//   }
+//   document.body.appendChild(script);
+// }
+//passing function as argument
 
+//error handling
+// function loadScript(src, callback){
+//   var script = document.createElement("script");
+//   script.src = src;
+//   script.onload = function() {
+//     console.log("Loaded script with SRC: " + src)
+//     callback(src);
+//   }
+//   script.onerror = function() {
+//     console.log("Error loading script with SRC: " + src);
+//     callback(new Error("Src got some error"))
+//   }
+//   document.body.appendChild(script);
+// }
+
+// function hello(src){
+//   alert("hello world" + src);
+// }
+
+// function goodmorning(src){
+//   alert("goodmorning" + src);
+// }
+
+// loadScript("https://cdn.jsdelivr.bgrshbrsgngrnet/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", hello)
+//type something to display error for example in loadscript
+
+//error handling more
+// function loadScript(src, callback){
+//   var script = document.createElement("script");
+//   script.src = src;
+//   script.onload = function() {
+//     console.log("Loaded script with SRC: " + src)
+//     callback(null, src);
+//     //null cause if no error display null, if code success if no error
+//   }
+//   script.onerror = function() {
+//     console.log("Error loading script with SRC: " + src);
+//     callback(new Error("Src got some error"))
+//   }
+//   document.body.appendChild(script);
+// }
+
+// function hello(error, src) {
+//   if (error) {
+//     console.log(error)
+//     return
+//   }
+//   alert('Hello World!' + src);
+// }
+
+// function goodmorning(src){
+//   alert("goodmorning" + src);
+// }
+
+// loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", hello)
+
+console.log("callbacks ends");
+
+///////////////////////////////////////////////////////////
