@@ -790,7 +790,7 @@ console.log("setTimeout and setInterval starts");
 
 ///////////////////////////////////
 
-console.log("callbacks starts");
+// console.log("callbacks starts");
 
 //Synchronous programming: executes code line by line
 //execute all lines in order to see output
@@ -809,40 +809,40 @@ console.log("callbacks starts");
 // console.log("end")
 
 //Callbacks, final code
-function loadScript(src, callback) {
-  var script = document.createElement("script");
-  script.src = src;
-  script.onload = function () {
-    console.log("Loaded script with SRC: " + src);
-    callback(null, src);
-  };
-  script.onerror = function () {
-    console.log("Error loading script with SRC: " + src);
-    callback(new Error("Src got some error"));
-  };
-  document.body.appendChild(script);
-}
+// function loadScript(src, callback) {
+//   var script = document.createElement("script");
+//   script.src = src;
+//   script.onload = function () {
+//     console.log("Loaded script with SRC: " + src);
+//     callback(null, src);
+//   };
+//   script.onerror = function () {
+//     console.log("Error loading script with SRC: " + src);
+//     callback(new Error("Src got some error"));
+//   };
+//   document.body.appendChild(script);
+// }
 
-function hello(error, src) {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  alert("Hello World!" + src);
-}
+// function hello(error, src) {
+//   if (error) {
+//     console.log(error);
+//     return;
+//   }
+//   alert("Hello World!" + src);
+// }
 
-function goodmorning(error, src) {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  alert("Good morning" + src);
-}
+// function goodmorning(error, src) {
+//   if (error) {
+//     console.log(error);
+//     return;
+//   }
+//   alert("Good morning" + src);
+// }
 
-loadScript(
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
-  goodmorning
-);
+// loadScript(
+//   "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
+//   goodmorning
+// );
 //this code tells that when you load this boostrap script along with that
 //after loading the script, execute the function also, lets say goodmorning function
 //two functions are created, run anyone of them, your choice
@@ -942,6 +942,124 @@ loadScript(
 
 // loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", hello)
 
-console.log("callbacks ends");
+// console.log("callbacks ends");
 
 ///////////////////////////////////////////////////////////
+
+// console.log("Callback Hell & Pyramid of Doom starts")
+
+// Callbacks
+// function loadScript(src, callback) {
+//   var script = document.createElement("script");
+//   script.src = src;
+//   script.onload = function() {
+//           console.log("Loaded script with SRC: " + src)
+//           callback(null, src);
+//   }
+//   script.onerror = function() {
+//           console.log("Error loading script with SRC: " + src);
+//           callback(new Error("Src got some error"))
+//   }
+//   document.body.appendChild(script);
+// }
+
+// function hello(error, src) {
+//   if (error) {
+//           console.log(error)
+//           return
+//   }
+//   alert('Hello World!' + src);
+// }
+
+
+
+
+// loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", function goodmorning(error, src) {
+//   if (error) {
+//           console.log(error)
+//           sendEmergencyMessageToCeo();
+//           return
+//   }
+//   loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap2.bundle.min.js", function goodmorning(error, src) {
+//           if (error) {
+//                   console.log(error)
+//                   sendEmergencyMessageToCeo();
+//                   return
+//           }
+//           loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap3.bundle.min.js", function goodmorning(error, src) {
+//                   if (error) {
+//                           console.log(error)
+//                           sendEmergencyMessageToCeo();
+//                           return
+//                   }
+//                   loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap4.bundle.min.js", function goodmorning(error, src) {
+//                           if (error) {
+//                                   console.log(error)
+//                                   sendEmergencyMessageToCeo();
+//                                   return
+//                           }
+//                           loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap5.bundle.min.js", function goodmorning(error, src) {
+//                                   if (error) {
+//                                           console.log(error)
+//                                           sendEmergencyMessageToCeo();
+//                                           return
+//                                   }
+//                                   loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap6.bundle.min.js", function goodmorning(error, src) {
+//                                           if (error) {
+//                                                   console.log(error)
+//                                                   sendEmergencyMessageToCeo();
+//                                                   return
+//                                           }
+//                                           loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap7.bundle.min.js", function goodmorning(error, src) {
+//                                                   if (error) {
+//                                                           console.log(error)
+//                                                           sendEmergencyMessageToCeo();
+//                                                           return
+//                                                   }
+//                                                   loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap8.bundle.min.js", function goodmorning(error, src) {
+//                                                           if (error) {
+//                                                                   console.log(error)
+//                                                                   sendEmergencyMessageToCeo();
+//                                                                   return
+//                                                           }
+//                                                           loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap9.bundle.min.js", function goodmorning(error, src) { })
+//                                                   })
+//                                           })
+//                                   })
+//                           })
+//                   })
+//           })
+//   })
+// })
+// Chintu
+
+// console.log("Callback Hell & Pyramid of Doom ends")
+
+/////////////////////////////////////
+
+console.log("Promises starts")
+
+//zomato will notify that order will be delievered in 30 mins, if late
+//also it will be notified
+//Alert in Nodejs prints in console
+
+let promise = new Promise(function(resolve, reject) {
+  alert("Hello")
+  resolve(56)
+})
+
+console.log("Hello One")
+setTimeout(function() {
+  console.log("Hello Two in 2 seconds")
+}, 2000)
+
+console.log("My name is " + "Hello Three")
+console.log(promise)
+
+// Fetch google.com homepage  ==> console.log("google.com homepage done")
+// Fetch data from the data api 
+// Fetch pictures from the server 
+// Print downloading 
+// Rest of the script 
+
+console.log("Promises ends")
