@@ -706,7 +706,7 @@ for (let i in fr) {
 
 ////////////////////////////////////////////////
 
-console.log("setTimeout and setInterval starts");
+// console.log("setTimeout and setInterval starts");
 
 // alert("hello")
 
@@ -1063,3 +1063,5 @@ console.log(promise)
 // Rest of the script 
 
 console.log("Promises ends")
+
+///////////////////////////////////////
