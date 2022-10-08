@@ -1037,24 +1037,24 @@ for (let i in fr) {
 
 /////////////////////////////////////
 
-console.log("Promises starts")
+// console.log("Promises starts")
 
 //zomato will notify that order will be delievered in 30 mins, if late
 //also it will be notified
 //Alert in Nodejs prints in console
 
-let promise = new Promise(function(resolve, reject) {
-  alert("Hello")
-  resolve(56)
-})
+// let promise = new Promise(function(resolve, reject) {
+//   alert("Hello")
+//   resolve(56)
+// })
 
-console.log("Hello One")
-setTimeout(function() {
-  console.log("Hello Two in 2 seconds")
-}, 2000)
+// console.log("Hello One")
+// setTimeout(function() {
+//   console.log("Hello Two in 2 seconds")
+// }, 2000)
 
-console.log("My name is " + "Hello Three")
-console.log(promise)
+// console.log("My name is " + "Hello Three")
+// console.log(promise)
 
 // Fetch google.com homepage  ==> console.log("google.com homepage done")
 // Fetch data from the data api 
@@ -1062,6 +1062,56 @@ console.log(promise)
 // Print downloading 
 // Rest of the script 
 
-console.log("Promises ends")
+// console.log("Promises ends")
 
 ///////////////////////////////////////
+
+console.log("Promise .then() and .catch() starts")
+
+// let p = new Promise((resolve, reject)=>{
+//   console.log("promise is pending")
+//   setTimeout(()=>{
+//     // console.log("I am a promise and I am fulfilled")
+//     console.log("I am a promise and I am rejected")
+//     // resolve(true)
+//     reject(new Error("I am an error"))
+//   }, 5000)
+// })
+
+// console.log(p)
+
+
+let p1 = new Promise((resolve, reject)=>{
+  console.log("promise is pending")
+  setTimeout(()=>{
+    // console.log("I am a promise and I am fulfilled")
+    console.log("I am a promise and I am rejected")
+    resolve(true)
+    // reject(new Error("I am an error"))
+  }, 5000)
+})
+
+
+let p2 = new Promise((resolve, reject)=>{
+  console.log("promise is pending")
+  setTimeout(()=>{
+    // console.log("I am a promise and I am fulfilled")
+    console.log("I am a promise and I am rejected")
+    // resolve(true)
+    reject(new Error("I am an error"))
+  }, 5000)
+})
+
+// console.log(p1, p2)
+
+p1.then((value)=>{
+  console.log(value)
+})
+
+p2.catch((error)=>{
+  console.log(error)
+})
+
+console.log("Promise .then() and .catch() ends")
+
+////////////////////////////////////
