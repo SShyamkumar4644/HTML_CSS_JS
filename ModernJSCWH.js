@@ -1121,24 +1121,24 @@ console.log("Promises ends")
 
 console.log("Promise API starts")
 
-let p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-          resolve("Value 1");
-  }, 11000);
-});
+// let p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//           resolve("Value 1");
+//   }, 11000);
+// });
 
-let p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-          // resolve("Value 2");
-          reject(new Error("Error"));
-  }, 2000);
-});
+// let p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//           resolve("Value 2");
+//           // reject(new Error("Error"));
+//   }, 2000);
+// });
 
-let p3 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-          resolve("Value 3");
-  }, 3000);
-});
+// let p3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//           resolve("Value 3");
+//   }, 3000);
+// });
 
 // p1.then((value) => {
 //         console.log(value)
@@ -1153,14 +1153,82 @@ let p3 = new Promise((resolve, reject) => {
 // })
 
 // let promise_all = Promise.all([p1, p2, p3])
+//prints the value only after 3seconds, that is which has highest timings
+//p1 has 1s. p2 2s, p3 3s, so after 3s, you will get output
+//nut any of them has reject(new Error("Error"));, then whole array will 
+//throw error, and stop executing, it will be rejected, to overcome this use
+//allSettled, it will show the status if it is fulfilled or rejected.
+
 // let promise_all = Promise.allSettled([p1, p2, p3])
+//even if it is rejected the code will execute and show status of each
+
 // let promise_all = Promise.race([p1, p2, p3])
+//this will print which value will print the first and faster
+//here p1 is 1s, p2 2s, p3 3s, so p1 will print value 1
+
 // let promise_all = Promise.resolve(6)
-let promise_all = Promise.reject(new Error("Hey"))
-promise_all.then((value) => {
-  console.log(value)
-})
+// let promise_all = Promise.reject(new Error("Hey"))
+// promise_all.then((value) => {
+//   console.log(value)
+// })
 
 console.log("Promise API ends")
 
 ////////////////////////////////////////////////
+
+console.log("async await starts")
+
+
+async function harry(){
+  let delhiWeather = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+      resolve("27 deg")
+    }, 3000)
+  })
+  let bangaloreWeather = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+      resolve("21 deg")
+    }, 5000)
+  })
+
+  // delhiWeather.then(alert)
+  // bangaloreWeather.then(alert)
+  console.log('Fetching delhi weather please wait...')
+  let delhiW = await delhiWeather
+  console.log("Fetched delhi weather: " + delhiW)
+
+  console.log('Fetching bangalore weather please wait...')
+  let bangaloreW = await bangaloreWeather
+  console.log("Fetched bangalore weather: " + bangaloreW)
+  return [delhiW, bangaloreW]
+  //till you get delhi weather, it wont proceed next
+
+}
+
+// const cherry = async () => {
+//   console.log("Hey I am cherry and I am not waiting ")
+// }
+// // console.log("Welcome to weather control room")
+// let a = harry()
+// let b = cherry()
+// //you have twon functions here these will parellel and doesn't wait, harry will print
+// //alongside with cherry, you can do it to stop like first execute harry, then print cherry
+// //use async await for that
+// a.then((value)=>{
+  //   console.log(value)
+  // })
+  // console.log(a)
+  
+  const cherry = async () => {
+    console.log("Hey I am cherry and I am waiting ")
+  }
+  
+  const main1 = async () => {
+    console.log("Welcome to weather control room")
+    let a = await harry()
+    let b = await cherry()
+  }
+main1()
+
+
+console.log("async await ends")
