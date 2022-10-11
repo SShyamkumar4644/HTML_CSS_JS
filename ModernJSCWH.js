@@ -1037,7 +1037,7 @@ for (let i in fr) {
 
 /////////////////////////////////////
 
-console.log("Promises starts")
+// console.log("Promises starts")
 
 //zomato will notify that order will be delievered in 30 mins, if late
 //also it will be notified
@@ -1065,7 +1065,7 @@ console.log("Promises starts")
 // Print downloading 
 // Rest of the script 
 
-console.log("Promises ends")
+// console.log("Promises ends")
 
 ///////////////////////////////////////
 
@@ -1119,7 +1119,7 @@ console.log("Promises ends")
 
 ////////////////////////////////////
 
-console.log("Promise API starts")
+// console.log("Promise API starts")
 
 // let p1 = new Promise((resolve, reject) => {
 //   setTimeout(() => {
@@ -1172,38 +1172,38 @@ console.log("Promise API starts")
 //   console.log(value)
 // })
 
-console.log("Promise API ends")
+// console.log("Promise API ends")
 
 ////////////////////////////////////////////////
 
-console.log("async await starts")
+// console.log("async await starts")
 
 
-async function harry(){
-  let delhiWeather = new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-      resolve("27 deg")
-    }, 3000)
-  })
-  let bangaloreWeather = new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-      resolve("21 deg")
-    }, 5000)
-  })
+// async function harry(){
+//   let delhiWeather = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       resolve("27 deg")
+//     }, 3000)
+//   })
+//   let bangaloreWeather = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       resolve("21 deg")
+//     }, 5000)
+//   })
 
-  // delhiWeather.then(alert)
-  // bangaloreWeather.then(alert)
-  console.log('Fetching delhi weather please wait...')
-  let delhiW = await delhiWeather
-  console.log("Fetched delhi weather: " + delhiW)
+//   // delhiWeather.then(alert)
+//   // bangaloreWeather.then(alert)
+//   console.log('Fetching delhi weather please wait...')
+//   let delhiW = await delhiWeather
+//   console.log("Fetched delhi weather: " + delhiW)
 
-  console.log('Fetching bangalore weather please wait...')
-  let bangaloreW = await bangaloreWeather
-  console.log("Fetched bangalore weather: " + bangaloreW)
-  return [delhiW, bangaloreW]
-  //till you get delhi weather, it wont proceed next
+//   console.log('Fetching bangalore weather please wait...')
+//   let bangaloreW = await bangaloreWeather
+//   console.log("Fetched bangalore weather: " + bangaloreW)
+//   return [delhiW, bangaloreW]
+//   //till you get delhi weather, it wont proceed next
 
-}
+// }
 
 // const cherry = async () => {
 //   console.log("Hey I am cherry and I am not waiting ")
@@ -1219,16 +1219,18 @@ async function harry(){
   // })
   // console.log(a)
   
-  const cherry = async () => {
-    console.log("Hey I am cherry and I am waiting ")
-  }
+//   const cherry = async () => {
+//     console.log("Hey I am cherry and I am waiting ")
+//   }
   
-  const main1 = async () => {
-    console.log("Welcome to weather control room")
-    let a = await harry()
-    let b = await cherry()
-  }
-main1()
+//   const main1 = async () => {
+//     console.log("Welcome to weather control room")
+//     let a = await harry()
+//     let b = await cherry()
+//   }
+// main1()
+//in this main1 function we are creating async await function so that cherry() 
+//need to wait until harry() function finishes executing
+// console.log("async await ends")
 
-
-console.log("async await ends")
+////////////////////////////////////
