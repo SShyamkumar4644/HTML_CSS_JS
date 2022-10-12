@@ -971,9 +971,6 @@ for (let i in fr) {
 //   alert('Hello World!' + src);
 // }
 
-
-
-
 // loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", function goodmorning(error, src) {
 //   if (error) {
 //           console.log(error)
@@ -1050,7 +1047,6 @@ for (let i in fr) {
 
 // console.log(promise)
 
-
 // console.log("Hello One")
 // setTimeout(function() {
 //   console.log("Hello Two in 2 seconds")
@@ -1060,10 +1056,10 @@ for (let i in fr) {
 // console.log(promise)
 
 // Fetch google.com homepage  ==> console.log("google.com homepage done")
-// Fetch data from the data api 
-// Fetch pictures from the server 
-// Print downloading 
-// Rest of the script 
+// Fetch data from the data api
+// Fetch pictures from the server
+// Print downloading
+// Rest of the script
 
 // console.log("Promises ends")
 
@@ -1083,7 +1079,6 @@ for (let i in fr) {
 
 // console.log(p)
 
-
 // let p1 = new Promise((resolve, reject)=>{
 //   console.log("promise is pending")
 //   setTimeout(()=>{
@@ -1093,7 +1088,6 @@ for (let i in fr) {
 //     // reject(new Error("I am an error"))
 //   }, 5000)
 // })
-
 
 // let p2 = new Promise((resolve, reject)=>{
 //   console.log("promise is pending")
@@ -1155,7 +1149,7 @@ for (let i in fr) {
 // let promise_all = Promise.all([p1, p2, p3])
 //prints the value only after 3seconds, that is which has highest timings
 //p1 has 1s. p2 2s, p3 3s, so after 3s, you will get output
-//nut any of them has reject(new Error("Error"));, then whole array will 
+//nut any of them has reject(new Error("Error"));, then whole array will
 //throw error, and stop executing, it will be rejected, to overcome this use
 //allSettled, it will show the status if it is fulfilled or rejected.
 
@@ -1177,7 +1171,6 @@ for (let i in fr) {
 ////////////////////////////////////////////////
 
 // console.log("async await starts")
-
 
 // async function harry(){
 //   let delhiWeather = new Promise((resolve, reject)=>{
@@ -1215,22 +1208,127 @@ for (let i in fr) {
 // //alongside with cherry, you can do it to stop like first execute harry, then print cherry
 // //use async await for that
 // a.then((value)=>{
-  //   console.log(value)
-  // })
-  // console.log(a)
-  
+//   console.log(value)
+// })
+// console.log(a)
+
 //   const cherry = async () => {
 //     console.log("Hey I am cherry and I am waiting ")
 //   }
-  
+
 //   const main1 = async () => {
 //     console.log("Welcome to weather control room")
 //     let a = await harry()
 //     let b = await cherry()
 //   }
 // main1()
-//in this main1 function we are creating async await function so that cherry() 
+//in this main1 function we are creating async await function so that cherry()
 //need to wait until harry() function finishes executing
 // console.log("async await ends")
 
 ////////////////////////////////////
+
+// console.log("Finally clause starts");
+
+// try{
+//   let a =0;
+//   console.log(program)
+//   console.log("program ran successfully")
+// }
+
+// catch(err){
+//   console.log("This is an error")
+//   console.log(p)
+// }
+// finally{
+//   console.log("I am a good boy")
+// }
+//this block will exceute even if error occurs always even no erro also executes
+
+// const f = () => {
+//   try {
+//     let a = 0;
+//     // console.log(program)
+//     console.log(a);
+//     console.log("Program ran successfully");
+//     return;
+//   } catch (err) {
+//     console.log("This is an error");
+//     console.log(p);
+//   } finally {
+//     console.log("I am a good boy");
+//     // Close the file
+//     // Exit the Loop
+//     // Write to the log file
+//   }
+// };
+
+// f();
+// console.log("End");
+
+// console.log("Finally clause ends");
+
+//////////////////////////////////
+
+// console.log("Error Handling: try and catch starts");
+
+// setTimeout(() => {
+//   console.log("Hacking wifi.... Please wait...");
+// }, 1000);
+
+// try {
+//   console.log(rahul);
+// } catch (err) {
+//   console.log("Balle balle");
+// }
+// //even if you get error and you wish code execution does not want to stop
+// //use try catch block
+// //try catch works synchronously
+
+// setTimeout(() => {
+//   console.log("Fetching username and password.... Please wait...");
+// }, 2000);
+
+// setTimeout(() => {
+//   console.log("Hacking Rahul's facebook id.... Please wait...");
+// }, 3000);
+
+// setTimeout(() => {
+//   console.log(
+//     "Username and password of Rahul (+919356700001) fetched.... Please wait..."
+//   );
+// }, 4000);
+
+
+
+// setTimeout(()=>{
+//   console.log("Hacking wifi.... Please wait..." ) 
+//   }, 1000)
+  
+//   try{
+//           setTimeout(()=>{ 
+//                   console.log(rahul)  
+//           }, 100)
+//   }
+//   catch(err){
+//           console.log("Balle balle")
+//   }
+  
+  
+//   setTimeout(()=>{ 
+//           console.log("Fetching username and password.... Please wait..." )
+//   }, 2000) 
+  
+//   setTimeout(()=>{ 
+//   console.log("Hacking Rahul's facebook id.... Please wait..." )
+//   }, 3000) 
+  
+//   setTimeout(()=>{ 
+//   console.log("Username and password of Rahul (+919356700001) fetched.... Please wait..." )
+//   }, 4000) 
+
+
+// console.log("Error Handling: try and catch ends");
+
+
+///////////////////////////////////////////////
