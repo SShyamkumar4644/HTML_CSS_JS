@@ -1332,3 +1332,30 @@ for (let i in fr) {
 
 
 ///////////////////////////////////////////////
+
+// console.log("Fetch API starts")
+
+// let p = fetch("https://goweather.herokuapp.com/weather/Ny")
+//this is a random api to fetch to check the process of data fetching from the
+//internet, you can find diffrent links in google
+// p.then((response) => {
+//         console.log(response.status)
+//         console.log(response.ok)
+//         console.log(response.headers)
+        // console.log(response.text())
+        //you will get body stream already read, either you run json or text, since
+        //you ran json, you will get error in text()
+        // return response.json()
+// }).then((value2) => {
+//         console.log(value2)
+// })
+//getting response is a two stage process, to check that its by status and ok
+// console.log("Fetch API ends")
+
+////////////////////////////////////////
+
+console.log("Sending POST request with Fetch API starts")
+
+
+
+console.log("Sending POST request with Fetch API ends")
