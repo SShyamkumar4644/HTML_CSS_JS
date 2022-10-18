@@ -1354,8 +1354,19 @@ for (let i in fr) {
 
 ////////////////////////////////////////
 
-console.log("Sending POST request with Fetch API starts")
+console.log("Fetch API starts")
 
+console.log(document.cookie)
+document.cookie = "name=harry1122334400"
+document.cookie = "name2=harry11223344002"
+document.cookie = "name=harry"
+//This will override in name which is mentioned in top
+//seperate objects will be created and doesn't override
+let key = prompt("enter your key")
+let value = prompt("enter your value")
+document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+console.log(document.cookie)
 
+console.log("Fetch API ends")
 
-console.log("Sending POST request with Fetch API ends")
+////////////////////////////////////////
